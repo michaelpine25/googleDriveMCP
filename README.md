@@ -16,9 +16,11 @@ Follow these steps in order to get the app running:
 
    In the root of your project, create a `.env` file and add the following variables:
 
+```
 CLIENT_ID=your-client-id-here
 CLIENT_SECRET=your-client-secret-here
 REDIRECT_URI=http://localhost:3000
+```
 
 3. **Install Dependencies**
 
@@ -41,17 +43,23 @@ npm run build
 ```
 
 6. **Install Claude Desktop (if not already installed)**
+   
    Download and install Claude Desktop from https://claude.ai/download.
 
 7. **Configure Claude Desktop MCP Servers**
+
    Open the Claude Desktop MCP Server
    Open the Claude Desktop config file at:
 
    macOS/Linux:
+   ```
    ~/Library/Application Support/Claude/claude_desktop_config.json
+   ```
 
    Windows:
+   ```
    %APPDATA%\Claude\claude_desktop_config.json
+   ```
 
 Add the following MCP server configuration, adjusting the path to your build output and environment variables accordingly:
 
