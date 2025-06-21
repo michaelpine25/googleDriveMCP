@@ -1,4 +1,4 @@
-# googleDriveMCP
+# Google Drive MCP
 
 This project connects Claude Desktop to your Google Drive via the Model Context Protocol (MCP), allowing Claude to access and interact with your Drive files and folders securely.
 
