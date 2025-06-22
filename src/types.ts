@@ -31,6 +31,6 @@ export interface ReturnFileResponse {
 export interface File {
   id: string | null | undefined
   name: string | null | undefined
-  downloadLink?: string
-  viewLink?: string
+  viewLink?: string | null
+  downloadLink?: string | null
 }

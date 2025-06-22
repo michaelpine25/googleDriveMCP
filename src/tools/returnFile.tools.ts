@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { returnFile } from '../functions/returnFile.js'
+import { ReturnFileResponse } from '../types.js'
 
 export function registerReturnFileTool(server: McpServer) {
   server.tool(
@@ -13,7 +14,7 @@ export function registerReturnFileTool(server: McpServer) {
     },
     async ({ fileId }) => {
       try {
-        const response = await returnFile(fileId)
+        const response: ReturnFileResponse = await returnFile(fileId)
 
         if (response?.success) {
           return {

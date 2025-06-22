@@ -2,6 +2,7 @@ import { google } from 'googleapis'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { ReturnFileResponse } from '../types.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -21,7 +22,9 @@ oauth2Client.setCredentials(token)
 
 const drive = google.drive({ version: 'v3', auth: oauth2Client })
 
-export const returnFile = async (fileId: string) => {
+export const returnFile = async (
+  fileId: string
+): Promise<ReturnFileResponse> => {
   try {
     const res = await drive.files.get({
       fileId,

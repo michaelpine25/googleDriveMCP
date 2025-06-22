@@ -2,7 +2,7 @@ import { google } from 'googleapis'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { ListFoldersResponse } from '../types.js'
+import { Folder, ListFoldersResponse } from '../types.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -32,7 +32,7 @@ export const listAllFolders = async (): Promise<ListFoldersResponse> => {
       pageSize: 1000,
     })
 
-    const folders =
+    const folders: Folder[] =
       folderRes.data.files?.map((folder) => ({
         id: folder.id,
         name: folder.name,
