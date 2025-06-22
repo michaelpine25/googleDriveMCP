@@ -5,7 +5,7 @@ import { ListFoldersResponse } from '../types.js'
 export function registerListAllFoldersTool(server: McpServer) {
   server.tool(
     'list-all-folders',
-    'List all folders that exist in the clients google drive account',
+    'Retrieves all folders from the client’s Google Drive. This is typically used as the first step to help the language model infer which specific folder to search in for a given document request.',
     {},
     async () => {
       try {

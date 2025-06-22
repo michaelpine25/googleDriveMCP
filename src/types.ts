@@ -15,3 +15,12 @@ export interface Folder {
   id: string | null | undefined
   name: string | null | undefined
 }
+
+export interface ListFilesResponse {
+  success: boolean
+  files?: {
+    id: string | null | undefined
+    name: string | null | undefined
+  }[]
+  message?: string
+}
