@@ -18,9 +18,19 @@ export interface Folder {
 
 export interface ListFilesResponse {
   success: boolean
-  files?: {
-    id: string | null | undefined
-    name: string | null | undefined
-  }[]
+  files?: File[]
   message?: string
+}
+
+export interface ReturnFileResponse {
+  success: boolean
+  file?: File
+  message?: string
+}
+
+export interface File {
+  id: string | null | undefined
+  name: string | null | undefined
+  downloadLink?: string
+  viewLink?: string
 }
