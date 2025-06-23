@@ -80,10 +80,3 @@ Add the following MCP server configuration, adjusting the path to your build out
 ```
 
 8. **Restart Claude Desktop**
-
-**Notes**
-Ensure `.env` and `token.json` are added to `.gitignore` and never committed to version control.
-
-The `token.json` contains your OAuth tokens, allowing token refresh without re-authentication.
-
-The MCP server runs locally and communicates with Claude Desktop over standard input/output (stdio).
