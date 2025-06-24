@@ -48,8 +48,7 @@ npm run build
 
 7. **Configure Claude Desktop MCP Servers**
 
-   Open the Claude Desktop MCP Server
-   Open the Claude Desktop config file at:
+   In a text editor open the Claude Desktop config file at:
 
    macOS/Linux:
    ```
@@ -78,5 +77,6 @@ Add the following MCP server configuration, adjusting the path to your build out
   }
 }
 ```
+Save the file
 
 8. **Restart Claude Desktop**
